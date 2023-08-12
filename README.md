@@ -40,11 +40,11 @@ The api only will work if the lookup file lookup_file_config.json is persisted o
 Here are the instructions to persist the file with a gateway-extension policy.
 ## Getting the DataPower export with the lookup file  
 
-1. Navigate to and log into a gateway to create the directory and upload the file to the directory. In our example, it will be local:///lookup_files
+1. Navigate to and log into a gateway to create the directory and upload the file to the directory. In our example, it will be local:///lookup_files  
 ![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/6ab5ea21-5d1e-41e3-8fb3-c14f528ccd72)  
 
 
-2. Go to the export section and use "Export configuration and files from the current domain", select next, update the Export file name and choose "Export all local files", select next again, and Download the export.
+2. Go to the export section and use "Export configuration and files from the current domain", select next, update the Export file name and choose "Export all local files", select next again, and Download the export.  
 ![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/c99e447c-92ed-4b99-b89b-3bee774275f8)  
 
 
@@ -53,7 +53,7 @@ Here are the instructions to persist the file with a gateway-extension policy.
 
 
 4. Once removed, navigate back to the level where the export.xml file is located, and rezip the export.  
-![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/b01fdace-7696-4b74-80e9-650aa94af782)  
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/b01fdace-7696-4b74-80e9-650aa94af782)   
 
 
 [Here is a sample export where the lookup file is included](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/blob/main/export-files.zip).  
