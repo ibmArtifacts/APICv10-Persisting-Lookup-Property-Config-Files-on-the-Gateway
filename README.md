@@ -91,6 +91,8 @@ At this point, you may remove the file and directory originally put in the apic 
 8. Afterwards, you should see the directory and file on the gateway.  
 ![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/81a8cc67-66fe-4e5f-9b53-bb8cf17bc340)
 
+You may take the [gateway-extension.zip](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/blob/main/gateway-extension.zip) attached to this document to upload to your gateway, and see the file and directory get created on the gateway.  
+Then you can use the api [lookup-file.yaml](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/blob/main/lookup-file.yaml) to test it.  
 
 
 
