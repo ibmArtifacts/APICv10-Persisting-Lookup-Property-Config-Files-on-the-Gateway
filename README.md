@@ -54,7 +54,8 @@ Here are the instructions to persist the file with a gateway-extension policy.
 4. Once removed, navigate back to the level where the export.xml file is located, and rezip the export.  
 ![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/95b8b44f-5ea2-4992-8266-a74df00c7825)
 
-Here is a sample export where the lookup file
+Here is a sample export where the lookup file is included: 
+NOTE: If you are to use the 
 
 
 
