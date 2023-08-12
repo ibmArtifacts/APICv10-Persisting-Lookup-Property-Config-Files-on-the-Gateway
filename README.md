@@ -7,7 +7,7 @@ Configmaps will require reboots to the gateway every time there is a change, but
 This document assumes that the implimentor:
 - has privileges to upload gateway-extensions to the CLoud Manager,
 - knows how to develop apis on APIC,
-- knows what DataPower Gateway is and has a gateway environment to execute the tasks detailed in this document.
+- and knows what DataPower Gateway is and has a gateway environment to execute the tasks detailed in this document.
 
 For this example, we have an API, which contains a GatewayScript that reads a file on the gateway to pull port information from a lookup properties config file.
 Use cases like this exist to ensure there is one externalized source for multiple code/scripts to reference on different environments to achieve portability of code and lessen having to change certain values in multiple apis many times when a change occurs.
