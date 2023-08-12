@@ -54,8 +54,47 @@ Here are the instructions to persist the file with a gateway-extension policy.
 4. Once removed, navigate back to the level where the export.xml file is located, and rezip the export.  
 ![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/95b8b44f-5ea2-4992-8266-a74df00c7825)
 
-Here is a sample export where the lookup file is included: 
-NOTE: If you are to use the 
+[Here is a sample export where the lookup file is included](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/blob/main/export-files.zip).  
+NOTE: If you are to use the export-files.zip, ensure you update the export.xml to include the file name and directory you're trying to upload to the gateway. In addition, ensure you have the file and directory present in the zip file.  
+
+## Creating the Gateway-Extension to push the export to all the gateways  
+
+5. In the same place you have the gateway export (e.g. export-files.zip), create a file titled manifest.json, and include the following sample details in the file. Then zip up the gateway export and manifest.json file together naming the zip gateway-extension.zip.
+This tells APIC to import the export-files.zip to the gateways associated to the topology you upload the Gateway-Extension to.  
+```
+{
+    "extension": {
+      "properties": {
+        "deploy-policy-emulator": false
+      },
+      "files": [
+        {
+          "filename":"export-files.zip",
+          "deploy": "immediate",
+          "type": "dp-import"
+        }
+    ]
+  }   
+}
+```  
+More details on the manifest properties may be found in the [IBM documentation for Gateway extension manifest](https://www.ibm.com/docs/en/api-connect/10.0.5.x_lts?topic=gateway-extensions-manifest).  
+
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/c63f5c88-84a2-41ad-80b3-f657763ec5e6)  
+
+At this point, you may remove the file and directory originally put in the apic domain to take the export, because you will want to see if the next steps that imports the file and directory works.
+
+## Upload the Gateway-Extension
+6. Log into the Cloud Manager, and navigate to the Topology section. Then located the gateway service and click on the elipsis at the end of the gateway to select Configure gateway.  
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/62e724cf-f1d9-49aa-aebc-9f9a39e6eba2)
+
+7. Click Add and upload the gateway-extension.zip.  
+8. Afterwards, you should see the directory and file on the gateway.  
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/81a8cc67-66fe-4e5f-9b53-bb8cf17bc340)
+
+
+
+
+
 
 
 
