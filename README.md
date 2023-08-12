@@ -41,18 +41,20 @@ Here are the instructions to persist the file with a gateway-extension policy.
 ## Getting the DataPower export with the lookup file  
 
 1. Navigate to and log into a gateway to create the directory and upload the file to the directory. In our example, it will be local:///lookup_files
-   
-![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/8bc19352-d634-40c7-af99-94f0f7677a29)
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/6ab5ea21-5d1e-41e3-8fb3-c14f528ccd72)  
+
 
 2. Go to the export section and use "Export configuration and files from the current domain", select next, update the Export file name and choose "Export all local files", select next again, and Download the export.
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/c99e447c-92ed-4b99-b89b-3bee774275f8)  
 
-![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/727a60ed-d180-43e6-b395-9fb757a30b6d)  
 
 3. Once exported, unzip the file to clean up any directories or files not required (e.g. config, dp-aux, local/extension, local/gwapi, local/isp, local/config-sequence.cfg, etc).  
-![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/10440aee-676c-4cd5-ba48-5c6aca237d48)
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/a9ffa452-68d8-4fa4-8cb8-a5aa3f469c42)  
+
 
 4. Once removed, navigate back to the level where the export.xml file is located, and rezip the export.  
-![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/95b8b44f-5ea2-4992-8266-a74df00c7825)
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/b01fdace-7696-4b74-80e9-650aa94af782)  
+
 
 [Here is a sample export where the lookup file is included](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/blob/main/export-files.zip).  
 NOTE: If you are to use the export-files.zip, ensure you update the export.xml to include the file name and directory you're trying to upload to the gateway. In addition, ensure you have the file and directory present in the zip file.  
@@ -79,17 +81,20 @@ This tells APIC to import the export-files.zip to the gateways associated to the
 ```  
 More details on the manifest properties may be found in the [IBM documentation for Gateway extension manifest](https://www.ibm.com/docs/en/api-connect/10.0.5.x_lts?topic=gateway-extensions-manifest).  
 
-![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/c63f5c88-84a2-41ad-80b3-f657763ec5e6)  
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/fa84f0dd-04db-4e95-a77f-454692fadd21)  
+
 
 At this point, you may remove the file and directory originally put in the apic domain to take the export, because you will want to see if the next steps that imports the file and directory works.
 
 ## Upload the Gateway-Extension
 6. Log into the Cloud Manager, and navigate to the Topology section. Then located the gateway service and click on the elipsis at the end of the gateway to select Configure gateway.  
-![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/62e724cf-f1d9-49aa-aebc-9f9a39e6eba2)
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/8cceaaf1-f216-4a99-91e4-de6b35de321f)  
+
 
 7. Click Add and upload the gateway-extension.zip.  
 8. Afterwards, you should see the directory and file on the gateway.  
-![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/81a8cc67-66fe-4e5f-9b53-bb8cf17bc340)
+![image](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/assets/66093865/20c68dfb-49d6-45d7-91e9-d96156fcb0f1)  
+
 
 You may take the [gateway-extension.zip](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/blob/main/gateway-extension.zip) attached to this document to upload to your gateway, and see the file and directory get created on the gateway.  
 Then you can use the api [lookup-file.yaml](https://github.com/ibmArtifacts/APICv10-Persisting-Lookup-Property-Config-Files-on-the-Gateway/blob/main/lookup-file.yaml) to test it.  
